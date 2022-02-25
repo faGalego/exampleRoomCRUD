@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/subscriberListFragment">
+
+    <fragment
+        android:id="@+id/subscriberListFragment"
+        android:name="com.fabriciogalego.examplecrud.ui.subscriberlist.SubscriberListFragment"
+        android:label="subscriber_list_fragment"
+        tools:layout="@layout/subscriber_list_fragment" />
+
+    <fragment
+        android:id="@+id/subscriberFragment"
+        android:name="com.fabriciogalego.examplecrud.ui.subscriber.SubscriberFragment"
+        android:label="@string/subscriber_title"
+        tools:layout="@layout/subscriber_fragment" />
+
+</navigation>
