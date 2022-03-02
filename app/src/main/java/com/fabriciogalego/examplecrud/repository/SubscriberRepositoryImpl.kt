@@ -33,7 +33,7 @@ class SubscriberRepositoryImpl(
         subscriberDao.deleteAll()
     }
 
-    override fun getAllSubscribers(): LiveData<List<SubscriberEntity>> {
+    override suspend fun getAllSubscribers(): List<SubscriberEntity> {
         return subscriberDao.getAll()
     }
 }
