@@ -63,6 +63,8 @@ class SubscriberFragment : Fragment() {
             binding.subscriberFragmentAddButton.text = getString(R.string.subscriber_edit_button)
             binding.subscriberFragmentNameEditText.setText(subscriber.name)
             binding.subscriberFragmentEmailEditText.setText(subscriber.email)
+
+            binding.subscriberFragmentDeleteButton.visibility = View.VISIBLE
         }
 
         setObservers()
@@ -105,6 +107,10 @@ class SubscriberFragment : Fragment() {
             val name = binding.subscriberFragmentNameEditText.text.toString()
             val email = binding.subscriberFragmentEmailEditText.text.toString()
             viewModel.addOrInsertSubscriber(name, email, args.subscriber?.id ?: 0)
+        }
+
+        binding.subscriberFragmentDeleteButton.setOnClickListener {
+            viewModel.removeSubscriber(args.subscriber?.id ?: 0)
         }
     }
 }

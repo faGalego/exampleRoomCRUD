@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     android:focusable="true"
     android:focusableInTouchMode="true"
+    android:padding="16dp"
     tools:context=".ui.subscriber.SubscriberFragment">
 
     <com.google.android.material.textfield.TextInputLayout
@@ -52,5 +52,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/subscriber_fragment_email_input_layout" />
+
+    <Button
+        android:id="@+id/subscriber_fragment_delete_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/holo_red_dark"
+        android:text="@string/subscriber_delete_button"
+        android:textColor="@android:color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/subscriber_fragment_email_input_layout"
+        app:layout_constraintStart_toStartOf="@id/subscriber_fragment_email_input_layout"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
